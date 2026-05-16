@@ -1,5 +1,7 @@
 import type { FishType } from "./components/Fish/Fish";
 
+export type GameState = 'PLAY' | 'PAUSE' | 'INTRO' | 'LOST' | 'WON'
+
 export const FISH_SIZE_ORDER: FishType[] = ['xs', 's', 'm', 'l', 'xl'];
 
 export const FISH_SIZE_MAP: Record<FishType, number> = {

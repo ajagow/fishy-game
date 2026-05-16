@@ -1,17 +1,29 @@
 import styled from "styled-components"
+import { Text } from '../Text/Text'
+import type { GameState } from "../../constants"
 
 const HeaderContainer = styled.div`
     text-align: center;
 `
-export const Header = () => {
+
+const ActionButtonContainer = styled.div`
+    
+`
+type HeaderProps = {
+    setGameState: (state: GameState) => void
+    resetGame: () => void
+}
+
+export const Header = ({ setGameState, resetGame }: HeaderProps) => {
     return (
         <HeaderContainer>
-            <h1>Welcome to Fishy!</h1>
-            <p>
-                To play, use your arrow keys to move your fish (the red square). 
-                Eat fish smaller than you to keep growing in size until you're king of the ocean! 
-                Be careful though, if you collide with a fish larger than you, the game will end!
-            </p>
+            <Text variant="title">Fishy!</Text>
+            <ActionButtonContainer>
+                <button onClick={() => {
+                    setGameState('PAUSE')
+                }}>pause</button>
+                <button onClick={() => resetGame()}>restart</button>
+            </ActionButtonContainer>
         </HeaderContainer>
     )
 }

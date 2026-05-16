@@ -56,6 +56,8 @@ const isColliding = (playerFish: BaseFish, fish: NPCFish): boolean => {
 }
 
 const isKilledByOtherFish = ({fishType, otherFishType}: {fishType: FishType; otherFishType: FishType}) => {
+    console.log('FISH_SIZE_ORDER.indexOf(fishType): ', FISH_SIZE_ORDER.indexOf(fishType))
+    console.log('FISH_SIZE_ORDER.indexOf(otherFishType): ', FISH_SIZE_ORDER.indexOf(otherFishType))
   return FISH_SIZE_ORDER.indexOf(fishType) < FISH_SIZE_ORDER.indexOf(otherFishType);
 }
 
@@ -65,7 +67,7 @@ const growPlayer = (playerFish: BaseFish): boolean => {
   if (!isMaxSize) {
     playerFish.fishType = FISH_SIZE_ORDER[currentIndex + 1]
   }
-  return isMaxSize
+  return false
 }
 
 
@@ -88,3 +90,4 @@ export const handleCollision = (playerFishRef: RefObject<BaseFish>, otherFishRef
     return false
 
 }
+
