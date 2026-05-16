@@ -18,7 +18,7 @@ const GAME_MODAL_CONTENT: Record<GameState, { title?: string; body?: string[]; b
             "But watch out! If you run into a larger fish, they'll eat you.",
             "To finish the game, you must eat all the fish in the ocean"
         ],
-        btnLabel: "Start",
+        btnLabel: "start",
         btnAction: 'PLAY'
     },
     "PAUSE": {
@@ -38,7 +38,7 @@ const GAME_MODAL_CONTENT: Record<GameState, { title?: string; body?: string[]; b
         btnAction: 'PLAY'
     },
     "LOST": {
-        title: "...And another bit the dust!",
+        title: "...And another one bit the dust!",
         body: ["Sorry, buddy. Looks like mother nature wins this time. Better luck next time!"],
         btnLabel: 'try again',
         btnAction: 'PLAY'

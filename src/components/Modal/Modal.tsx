@@ -27,7 +27,6 @@ const ModalContainer = styled.div`
     border-radius: 20px;
     background-color: white;    
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 50%;
 `
 
 const ModalContent = styled.div`
